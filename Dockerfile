@@ -20,5 +20,7 @@ RUN apt-get update -y && \
 
 WORKDIR /data/www
 
+USER "www-data"
+
 ENTRYPOINT ["php", "artisan"]
 CMD ["--help"]
